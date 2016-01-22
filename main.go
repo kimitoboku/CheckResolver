@@ -17,7 +17,7 @@ func checkOpenResolve(ns string) bool {
 	dst := "techack.net"
 	c := new(dns.Client)
 	m := new(dns.Msg)
-	m.SetQuestion(dns.Fqdn(dst), dns.TypeNS)
+	m.SetQuestion(dns.Fqdn(dst), dns.TypeA)
 	m.RecursionDesired = true
 	r, _, err := c.Exchange(m, net.JoinHostPort(ns, "53"))
 
@@ -53,7 +53,9 @@ func main() {
 		rrs := splitRR(rr)
 		check := checkOpenResolve(rrs[4])
 		if check == true {
-			fmt.Println(rrs[4] + " is OpenResolve")
+			fmt.Println(dst + ":" + rrs[4] + " is OpenResolve")
+		} else {
+			fmt.Println(dst + ":" + rrs[4] + " is not OpenResolve")
 		}
 	}
 }
