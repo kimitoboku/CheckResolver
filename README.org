@@ -1,0 +1,10 @@
+* CheckResolver
+オープンリゾルバを適当に探すコード
+
+* Useage
+ドメイン名のリストをテキストで作成し以下のコマンドを実行する
+
+#+BEGIN_SRC text
+> go build
+> ./run.sh domainlist
+#+END_SRC
