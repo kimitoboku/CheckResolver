@@ -53,9 +53,9 @@ func main() {
 		rrs := splitRR(rr)
 		check := checkOpenResolve(rrs[4])
 		if check == true {
-			fmt.Printf("%v\t%v\tOpen Resolver\n",dst,rrs[4])
+			fmt.Printf("%v\t%v\tYes\n",dst,rrs[4])
 		} else {
-			fmt.Printf("%v\t%v\tNot Open Resolver\n",dst,rrs[4])
+			fmt.Printf("%v\t%v\tNo\n",dst,rrs[4])
 		}
 	}
 }
