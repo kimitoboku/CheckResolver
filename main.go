@@ -53,9 +53,9 @@ func main() {
 		rrs := splitRR(rr)
 		check := checkOpenResolve(rrs[4])
 		if check == true {
-			fmt.Println(dst + ":" + rrs[4] + " is OpenResolve")
+			fmt.Printf("%v\t%v\tOpen Resolver\n",dst,rrs[4])
 		} else {
-			fmt.Println(dst + ":" + rrs[4] + " is not OpenResolve")
+			fmt.Printf("%v\t%v\tNot Open Resolver\n",dst,rrs[4])
 		}
 	}
 }

@@ -1,3 +1,5 @@
 CheckResolver
 checked
 test.txt
+.idea/
+.idea/*
